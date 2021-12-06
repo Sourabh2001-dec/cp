@@ -1,0 +1,1 @@
+{"name":"Local: kanpsack-top_down","url":"/mnt/DA28EF1928EEF383/C++/DP/kanpsack-top_down.cpp","tests":[{"id":1638336540919,"input":"5\n1 1\n2 2\n2 3\n2 4\n2 5","output":"1 5 6 9 10 12 13 14 15"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/DP/kanpsack-top_down.cpp","group":"local","local":true}

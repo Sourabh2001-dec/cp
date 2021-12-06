@@ -1,0 +1,1 @@
+{"name":"Local: 20","url":"/mnt/DA28EF1928EEF383/C++/cookoff/20.cpp","tests":[{"id":1635343521867,"input":"3\n50\n172\n201\n","output":"Easy\nMedium\nHard\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/cookoff/20.cpp","group":"local","local":true}

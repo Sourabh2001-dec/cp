@@ -1,0 +1,1 @@
+{"name":"Local: 2","url":"d:\\C++\\string\\2.cpp","tests":[{"id":1630234028341,"input":"baddbbaaafg","output":"Occurrence of b is: 3\nOccurrence of a is: 4\nOccurrence of d is: 2\nOccurrence of f is: 1\nOccurrence of g is: 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\string\\2.cpp","group":"local","local":true}

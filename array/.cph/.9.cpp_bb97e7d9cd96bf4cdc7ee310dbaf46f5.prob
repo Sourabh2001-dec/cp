@@ -1,0 +1,1 @@
+{"name":"Local: 9","url":"d:\\C++\\array\\9.cpp","tests":[{"id":1629778887866,"input":"6\n1 2 7 9 4 3","output":"Range : 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\array\\9.cpp","group":"local","local":true}

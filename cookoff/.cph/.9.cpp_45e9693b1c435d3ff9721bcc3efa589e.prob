@@ -1,0 +1,1 @@
+{"name":"Local: 9","url":"d:\\C++\\cookoff\\9.cpp","tests":[{"id":1632580832811,"input":"5\n1 12\n102 1235\n1000 2537\n998244353 1000000007\n27182818284 31415926535","output":"4\n378\n512\n585218\n1411036084"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\cookoff\\9.cpp","group":"local","local":true}
