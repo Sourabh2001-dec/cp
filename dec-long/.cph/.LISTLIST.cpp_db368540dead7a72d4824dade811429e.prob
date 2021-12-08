@@ -1,0 +1,1 @@
+{"name":"Local: LISTLIST","url":"/home/sourabh/Desktop/C++/dec-long/LISTLIST.cpp","tests":[{"id":1638812481461,"input":"4\n1\n1\n2\n1 2\n3\n1 1 2\n6\n1 1 1 1 1 1 1","output":"0\n-1\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/C++/dec-long/LISTLIST.cpp","group":"local","local":true}

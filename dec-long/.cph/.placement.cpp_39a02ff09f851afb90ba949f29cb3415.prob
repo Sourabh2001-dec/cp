@@ -1,0 +1,1 @@
+{"name":"Local: placement","url":"/home/sourabh/Desktop/C++/dec-long/placement.cpp","tests":[{"id":1638811092115,"input":"2\nA B C\nA B\nB C A\nA C","output":"A\nC"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/sourabh/Desktop/C++/dec-long/placement.cpp","group":"local","local":true}

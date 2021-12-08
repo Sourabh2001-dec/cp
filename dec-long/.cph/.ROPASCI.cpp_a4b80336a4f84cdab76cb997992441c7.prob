@@ -1,0 +1,1 @@
+{"name":"Local: ROPASCI","url":"/mnt/DA28EF1928EEF383/C++/dec-long/ROPASCI.cpp","tests":[{"id":1638856586297,"input":"2\n1\nS\n4\nS\nS\nP\nR","output":"S\nRRPR"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/dec-long/ROPASCI.cpp","group":"local","local":true}
