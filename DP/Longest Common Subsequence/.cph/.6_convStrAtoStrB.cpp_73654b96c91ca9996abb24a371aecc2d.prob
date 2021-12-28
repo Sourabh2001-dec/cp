@@ -1,0 +1,1 @@
+{"name":"Local: 6_convStrAtoStrB","url":"/mnt/DA28EF1928EEF383/C++/DP/Longest Common Subsequence/6_convStrAtoStrB.cpp","tests":[{"id":1639720926244,"input":"","output":"Insertions : 1\nDeletions : 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/DP/Longest Common Subsequence/6_convStrAtoStrB.cpp","group":"local","local":true}
