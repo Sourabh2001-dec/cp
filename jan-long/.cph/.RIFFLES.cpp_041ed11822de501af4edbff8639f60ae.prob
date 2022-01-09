@@ -1,0 +1,1 @@
+{"name":"Local: RIFFLES","url":"/mnt/DA28EF1928EEF383/C++/jan-long/RIFFLES.cpp","tests":[{"id":1641665272848,"input":"3\n6 1\n8 2\n2000 452","output":"1 3 5 2 4 6\n1 5 2 6 3 7 4 8\n1 10 6 2 11 7 3 12 8 4 13 9 5 14"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/jan-long/RIFFLES.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: XORED","url":"/mnt/DA28EF1928EEF383/C++/jan-long/XORED.cpp","tests":[{"id":1641724202875,"input":"4\n1 10\n2 4\n3 1\n5 3","output":"10\n7 3\n5 6 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/jan-long/XORED.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: KEPLERSLAW","url":"/mnt/DA28EF1928EEF383/C++/jan-long/KEPLERSLAW.cpp","tests":[{"id":1641644752603,"input":"3\n1 1 1 1\n1 2 3 4\n1 8 2 8","output":"Yes\nNo\nYes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/jan-long/KEPLERSLAW.cpp","group":"local","local":true}
