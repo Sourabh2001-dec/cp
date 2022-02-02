@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// s1 - s2 = diff
+// s1 + s2 = sum
+// 2*s1 = diff + sum
+// s1 = (diff + sum) / 2
+
 int subsetCountWithGivenDiff(vector<int> nums, int size, int diff)
 {
   int rows = size + 1;
