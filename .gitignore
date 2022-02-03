@@ -1,2 +1,6 @@
+# only include .cpp extension files
 *
-!*.cpp
+!/**/
+!*.*
+**/.cph
+!**/*.cpp
