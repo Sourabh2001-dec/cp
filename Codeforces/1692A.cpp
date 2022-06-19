@@ -21,9 +21,6 @@ using namespace std;
 #define sortall(x) sort(all(x))
 #define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
 #define PI 3.1415926535897932384626
-
-typedef unsigned long long ull;
-typedef long double lld;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pl;
 typedef vector<int> vi;
@@ -32,39 +29,35 @@ typedef vector<pii> vpii;
 typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
-
-#ifndef ONLINE_JUDGE
-#define debug(x) cerr << #x <<" "; _print(x); cerr << endl;
-#else
-#define debug(x)
-#endif
-
-void _print(ll t) {cerr << t;}
-void _print(int t) {cerr << t;}
-void _print(string t) {cerr << t;}
-void _print(char t) {cerr << t;}
-void _print(lld t) {cerr << t;}
-void _print(double t) {cerr << t;}
-void _print(ull t) {cerr << t;}
-
-template <class T, class V> void _print(pair <T, V> p);
-template <class T> void _print(vector <T> v);
-template <class T> void _print(set <T> v);
-template <class T, class V> void _print(map <T, V> v);
-template <class T> void _print(multiset <T> v);
-template <class T, class V> void _print(pair <T, V> p) {cerr << "{"; _print(p.ff); cerr << ","; _print(p.ss); cerr << "}";}
-template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
-template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
-template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
-template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
+mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
+int rng(int lim)
+{
+  uniform_int_distribution<int> uid(0, lim - 1);
+  return uid(rang);
+}
+int mpow(int base, int exp);
+void ipgraph(int n, int m);
+void dfs(int u, int par);
 
 const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
 //=======================
 
+vi g[N];
+int a[N];
+
 void solve()
 {
-  ll i, j, n, m;
+  ll a, b, c, d;
+  cin >> a >> b >> c >> d;
+  ll ans = 0;
+  if (b > a)
+    ans++;
+  if (c > a)
+    ans++;
+  if (d > a)
+    ans++;
+  cout << ans << "\n";
 }
 
 int main()
@@ -82,4 +75,38 @@ int main()
   return 0;
 }
 
+int mpow(int base, int exp)
+{
+  base %= mod;
+  int result = 1;
+  while (exp > 0)
+  {
+    if (exp & 1)
+      result = ((ll)result * base) % mod;
+    base = ((ll)base * base) % mod;
+    exp >>= 1;
+  }
+  return result;
+}
 
+void ipgraph(int n, int m)
+{
+  int i, u, v;
+  while (m--)
+  {
+    cin >> u >> v;
+    u--, v--;
+    g[u].pb(v);
+    g[v].pb(u);
+  }
+}
+
+void dfs(int u, int par)
+{
+  for (int v : g[u])
+  {
+    if (v == par)
+      continue;
+    dfs(v, u);
+  }
+}
