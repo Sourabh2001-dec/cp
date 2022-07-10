@@ -21,6 +21,9 @@ using namespace std;
 #define sortall(x) sort(all(x))
 #define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
 #define PI 3.1415926535897932384626
+
+typedef unsigned long long ull;
+typedef long double lld;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pl;
 typedef vector<int> vi;
@@ -29,16 +32,95 @@ typedef vector<pii> vpii;
 typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
-mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
-int rng(int lim)
+
+#ifndef ONLINE_JUDGE
+#define debug(x)     \
+  cerr << #x << " "; \
+  _print(x);         \
+  cerr << endl;
+#else
+#define debug(x)
+#endif
+
+void _print(ll t)
 {
-  uniform_int_distribution<int> uid(0, lim - 1);
-  return uid(rang);
+  cerr << t;
 }
-int mpow(int base, int exp);
+void _print(int t) { cerr << t; }
+void _print(string t) { cerr << t; }
+void _print(char t) { cerr << t; }
+void _print(lld t) { cerr << t; }
+void _print(double t) { cerr << t; }
+void _print(ull t) { cerr << t; }
+
+template <class T, class V>
+void _print(pair<T, V> p);
+template <class T>
+void _print(vector<T> v);
+template <class T>
+void _print(set<T> v);
+template <class T, class V>
+void _print(map<T, V> v);
+template <class T>
+void _print(multiset<T> v);
+template <class T, class V>
+void _print(pair<T, V> p)
+{
+  cerr << "{";
+  _print(p.ff);
+  cerr << ",";
+  _print(p.ss);
+  cerr << "}";
+}
+template <class T>
+void _print(vector<T> v)
+{
+  cerr << "[ ";
+  for (T i : v)
+  {
+    _print(i);
+    cerr << " ";
+  }
+  cerr << "]";
+}
+template <class T>
+void _print(set<T> v)
+{
+  cerr << "[ ";
+  for (T i : v)
+  {
+    _print(i);
+    cerr << " ";
+  }
+  cerr << "]";
+}
+template <class T>
+void _print(multiset<T> v)
+{
+  cerr << "[ ";
+  for (T i : v)
+  {
+    _print(i);
+    cerr << " ";
+  }
+  cerr << "]";
+}
+template <class T, class V>
+void _print(map<T, V> v)
+{
+  cerr << "[ ";
+  for (auto i : v)
+  {
+    _print(i);
+    cerr << " ";
+  }
+  cerr << "]";
+}
 
 const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
+int mpow(int base, int exp);
+
 //=======================
 
 void solve()
@@ -47,37 +129,25 @@ void solve()
 
   ll len;
   cin >> len;
+  len++;
   vl arr(len);
-
-  ll isOne = false;
-  ll isTwo = false;
-
-  fo(i, len)
+  Fo(i, 1, len)
   {
     cin >> arr[i];
-    if (arr[i] == 1)
-      isOne = true;
-    if (arr[i] == 2)
-      isTwo = true;
   }
-
-  ll pairs = 0;
-
-  fo(i, len)
+  debug(arr);
+  ll ans = 0;
+  Fo(i, 1, len)
   {
-    ll j1 = arr[i] - i;
-    ll j2 = 2 * arr[i] - i;
-    if (arr[i] != 1 && j1 >= 0 && j1 < len)
+    for (j = arr[i] - i; j < len; j += arr[i])
     {
-      pairs++;
-    }
-    if (arr[i] != 2 && j2 >= 0 && j2 < len)
-    {
-      pairs++;
+      if (j >= 0 && (i + j) == (arr[i] * arr[j]) && i < j)
+      {
+        ans++;
+      }
     }
   }
-
-  cout << pairs << "\n";
+  cout << ans << "\n";
 }
 
 int main()

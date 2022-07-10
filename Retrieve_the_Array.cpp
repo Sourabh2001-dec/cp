@@ -64,7 +64,26 @@ const int N = 3e5, M = N;
 
 void solve()
 {
-  ll i, j, n, m;
+  ll len;
+  cin >> len;
+  vl arr(len);
+
+  fo(i,len){
+    cin >> arr[i];
+  }
+
+  ll sum = 0;
+  fo(i,len){
+    sum += arr[i];
+  }
+
+  ll total = sum/(len+1);
+
+  fo(i,len){
+    cout << (arr[i]-total) << " ";
+  }
+
+  cout << "\n";
 }
 
 int main()
