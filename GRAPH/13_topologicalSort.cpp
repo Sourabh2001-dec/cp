@@ -2,6 +2,11 @@
 
 using namespace std;
 
+// what is topological sort?
+// topological sort is a linear ordering of vertices such that for every directed edge uv, u comes before v in the ordering.
+// topological sort is also known as topological sort or topological ordering.
+// topological sort is used to sort the vertices of a graph in such a way that all the vertices are reachable from the source vertex.
+
 class Solution
 {
 private:

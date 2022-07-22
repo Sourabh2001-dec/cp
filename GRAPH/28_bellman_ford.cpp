@@ -5,6 +5,10 @@
 //   dist[v] = dist[u] + wt
 // }
 
+//? A negative cycle is one in which the overall sum of the cycle becomes negative
+
+//? use of the algo is to find shortest path even if negative weights are present
+
 #include <bits/stdc++.h>
 using namespace std;
 struct node
@@ -22,6 +26,7 @@ struct node
 
 int main()
 {
+  // N nodes m edges
   int N = 6, m = 7;
   vector<node> edges;
   edges.push_back(node(0, 1, 5));

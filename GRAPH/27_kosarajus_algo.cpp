@@ -1,6 +1,8 @@
-// algo is used to find the strongly connected components in a directed graph
-// we first do topo sort and then transpose of the graph (i.e revers direction of node)
-// then we print the dfs of the components
+//? algo is used to find the strongly connected components in a directed graph
+//? we first do topo sort and then transpose of the graph (i.e revers direction of node)
+//? then we print the dfs of the transposed
+
+//? Used in social networks to discover groups of strongly connected people and make recommendations based on shared interests.
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -18,7 +20,7 @@ void dfs(int node, vector<int> &vis, vector<int> adj[], stack<int> &st)
   st.push(node);
 }
 
-void revDfs(int node, vector<int> adj[], vector<int> &vis )
+void revDfs(int node, vector<int> adj[], vector<int> &vis)
 {
   vis[node] = 1;
   cout << node << " ";

@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// we push the start node as zero in the queue
+// we discover the adjacent nodes and push them in queue if the cost is decreased
+
 int main()
 {
   int N, m;
@@ -16,6 +19,10 @@ int main()
   }
 
   int parent[N], key[N], mst[N];
+
+  // parent => store parent of a node in mst
+  // key => store the weight or cost of the mst
+  // mst => bool array which tells if a node is in mst or not
 
   for (int i = 0; i < N; i++)
   {

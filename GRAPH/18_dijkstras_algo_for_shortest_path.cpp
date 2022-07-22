@@ -29,6 +29,8 @@ int main()
     int node = elem.second;
     pq.pop();
 
+
+    // if we have inserted the node with updated distance lesser then current element which may be already processed we can ignore current
     if (dist[node] >= dis)
     {
       for (auto &i : g[node])

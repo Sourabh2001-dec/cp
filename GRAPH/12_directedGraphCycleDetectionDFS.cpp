@@ -2,6 +2,12 @@
 
 using namespace std;
 
+// here we maintain two arrays
+// vis => to mark the node from where dfs is called
+// dfsVis => to mark the nodes int the current dfs call
+//          when there are branches this arr will unmark nodes from the prev branch and start marking for the next branch
+//          so we can detect if the cycle is there in the current branch only
+
 class Solution
 {
 private:

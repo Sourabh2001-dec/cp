@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//! We cannot generate topological sort for a graph with cycles.
+
 class Solution
 {
 

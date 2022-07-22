@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//! condition to detect bridge => low[adjacent_node] > tin[node]
+
+//? We do dfs traversal from a node in graph while assigning a time and lowest time to reach to each node
+//? If we found a node which can be accessed by a early node with less time we modify current low to that low
+//? If we found a node with the above condition we add it to the set of bridges
+
 void dfs(int node, int parent, int &timer, vector<int> &tin, vector<int> &low, vector<int> &vis, vector<int> adj[])
 {
   vis[node] = 1;
@@ -31,7 +37,7 @@ int main()
 {
   int n, m;
   cin >> n >> m;
-  n= n+1;
+  n = n + 1;
   vector<int> adj[n];
   for (int i = 0; i < m; i++)
   {
@@ -41,8 +47,13 @@ int main()
     adj[v].push_back(u);
   }
 
+  // time of insertion
   vector<int> tin(n, -1);
+
+  // lowest time of insertion
   vector<int> low(n, -1);
+
+  // visited
   vector<int> vis(m, 0);
 
   int timer = 0;

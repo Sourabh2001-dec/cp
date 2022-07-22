@@ -1,5 +1,9 @@
 // articulation point is a node in  graph which when removed disconnects the graph components
 
+//? Similar to bridge cuts problem
+//? here when we found the bridge cut we mark the node in isAritculate array
+//? and the root is articulation if it has more than one child
+
 #include <bits/stdc++.h>
 using namespace std;
 
