@@ -1,5 +1,3 @@
-// kahn's algorithm
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -10,6 +8,9 @@ class Solution
 public:
   void printTopoSort(int N, vector<int> adj[])
   {
+    // calculate indegree of all nodes
+    // store those nodes in queue whose indeg is o
+    // pop queue store in vector and make the adj nodes indeg 1 less and if becomes zero push to node
     vector<int> indeg(N, 0);
     for (int i = 0; i < N; i++)
     {

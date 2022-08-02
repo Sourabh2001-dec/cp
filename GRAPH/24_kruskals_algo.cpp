@@ -48,6 +48,11 @@ void unionn(int u, int v, vector<int> &parent, vector<int> &rank)
 
 int main()
 {
+  //  The steps for implementing Kruskal's algorithm are as follows:
+
+  // Sort all the edges from low weight to high
+  // Take the edge with the lowest weight and add it to the spanning tree. If adding the edge created a cycle, then reject this edge.
+  // Keep adding edges until we reach all vertices.
   int N = 5, m = 6;
   vector<node> edges;
   edges.push_back(node(0, 1, 2));
@@ -62,6 +67,8 @@ int main()
   edges.push_back(node(3, 1, 8));
   edges.push_back(node(4, 1, 5));
   edges.push_back(node(4, 2, 7));
+
+  //! sorting
   sort(edges.begin(), edges.end(), cmp);
 
   vector<int> parent(N);

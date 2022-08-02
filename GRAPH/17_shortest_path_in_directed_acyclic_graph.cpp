@@ -1,4 +1,4 @@
-// shortest path in undirected graph with unit weights
+// shortest path in directed graph with unit weights
 
 #include <bits/stdc++.h>
 

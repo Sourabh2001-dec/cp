@@ -7,6 +7,12 @@ using namespace std;
 class Solution
 {
 
+  // maintain a distance matrix with INF as distance
+  // put first dist as 0
+  // push in queue
+  // pop queue and for every adj node check if their current dist is grater than elems dist + 1
+  // if greater update dist and push node
+
 public:
   void printShortDist(int N, vector<int> adj[])
   {

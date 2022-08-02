@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// The steps for implementing Prim's algorithm are as follows:
+
+// Initialize the minimum spanning tree with a vertex chosen at random.
+// Find all the edges that connect the tree to new vertices, find the minimum and add it to the tree
+// Keep repeating step 2 until we get a minimum spanning tree
+
 // we push the start node as zero in the queue
 // we discover the adjacent nodes and push them in queue if the cost is decreased
 
@@ -21,7 +27,7 @@ int main()
   int parent[N], key[N], mst[N];
 
   // parent => store parent of a node in mst
-  // key => store the weight or cost of the mst
+  // key => store the mimimum weight associated with the node in the mst
   // mst => bool array which tells if a node is in mst or not
 
   for (int i = 0; i < N; i++)
@@ -32,6 +38,7 @@ int main()
   key[0] = 0;
 
   priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+  // store as -> weight destination
   pq.push({0, 0});
 
   while (!pq.empty())
