@@ -12,7 +12,7 @@ void makeSet()
 {
   for (int i = 1; i <= n; i++)
   {
-    parent[i] = 1;
+    parent[i] = i;
     rank[i] = 0;
   }
 }
