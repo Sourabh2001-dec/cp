@@ -1,1 +1,0 @@
-{"name":"Local: 10","url":"d:\\C++\\cookoff\\10.cpp","tests":[{"id":1632652492003,"input":"3\n10 1 10\n25 2 10\n15 2 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\cookoff\\10.cpp","group":"local","local":true}

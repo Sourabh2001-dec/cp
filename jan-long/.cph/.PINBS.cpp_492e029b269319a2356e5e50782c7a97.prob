@@ -1,1 +1,0 @@
-{"name":"Local: PINBS","url":"/mnt/DA28EF1928EEF383/C++/jan-long/PINBS.cpp","tests":[{"id":1641652051987,"input":"3\n1\n111\n00000000000000000000000001","output":"No\nYes\nYes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/jan-long/PINBS.cpp","group":"local","local":true}

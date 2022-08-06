@@ -1,1 +1,0 @@
-{"name":"Local: COVSPRD","url":"/mnt/DA28EF1928EEF383/C++/jan-long/COVSPRD.cpp","tests":[{"id":1641645771252,"input":"4\n100 3\n2000 10\n16000800 16\n10 11","output":"8\n1024\n9216\n10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/jan-long/COVSPRD.cpp","group":"local","local":true}

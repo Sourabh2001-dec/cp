@@ -1,1 +1,0 @@
-{"name":"Local: CHEFGRD","url":"/mnt/DA28EF1928EEF383/C++/START21/CHEFGRD.cpp","tests":[{"id":1641398128000,"input":"3\n3 2 1\n5 2 3\n5 5 5","output":"1\n1\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/DA28EF1928EEF383/C++/START21/CHEFGRD.cpp","group":"local","local":true}

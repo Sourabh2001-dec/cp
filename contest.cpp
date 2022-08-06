@@ -34,17 +34,17 @@ typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 
 #ifndef ONLINE_JUDGE
-#define debug(x)     \
-  cerr << #x << " "; \
-  _print(x);         \
-  cerr << endl;
+#define debug(x)       \
+    cerr << #x << " "; \
+    _print(x);         \
+    cerr << endl;
 #else
 #define debug(x)
 #endif
 
 void _print(ll t)
 {
-  cerr << t;
+    cerr << t;
 }
 void _print(int t) { cerr << t; }
 void _print(string t) { cerr << t; }
@@ -66,55 +66,55 @@ void _print(multiset<T> v);
 template <class T, class V>
 void _print(pair<T, V> p)
 {
-  cerr << "{";
-  _print(p.ff);
-  cerr << ",";
-  _print(p.ss);
-  cerr << "}";
+    cerr << "{";
+    _print(p.ff);
+    cerr << ",";
+    _print(p.ss);
+    cerr << "}";
 }
 template <class T>
 void _print(vector<T> v)
 {
-  cerr << "[ ";
-  for (T i : v)
-  {
-    _print(i);
-    cerr << " ";
-  }
-  cerr << "]";
+    cerr << "[ ";
+    for (T i : v)
+    {
+        _print(i);
+        cerr << " ";
+    }
+    cerr << "]";
 }
 template <class T>
 void _print(set<T> v)
 {
-  cerr << "[ ";
-  for (T i : v)
-  {
-    _print(i);
-    cerr << " ";
-  }
-  cerr << "]";
+    cerr << "[ ";
+    for (T i : v)
+    {
+        _print(i);
+        cerr << " ";
+    }
+    cerr << "]";
 }
 template <class T>
 void _print(multiset<T> v)
 {
-  cerr << "[ ";
-  for (T i : v)
-  {
-    _print(i);
-    cerr << " ";
-  }
-  cerr << "]";
+    cerr << "[ ";
+    for (T i : v)
+    {
+        _print(i);
+        cerr << " ";
+    }
+    cerr << "]";
 }
 template <class T, class V>
 void _print(map<T, V> v)
 {
-  cerr << "[ ";
-  for (auto i : v)
-  {
-    _print(i);
-    cerr << " ";
-  }
-  cerr << "]";
+    cerr << "[ ";
+    for (auto i : v)
+    {
+        _print(i);
+        cerr << " ";
+    }
+    cerr << "]";
 }
 
 const int mod = 1'000'000'007;
@@ -123,49 +123,42 @@ const int N = 3e5, M = N;
 
 void solve()
 {
-  ll n;
-  cin >> n;
-  string st;
-  cin >> st;
+    int n, h, m;
+    cin >> n >> h >> m;
 
-  if (st[1] == st[0])
-  {
-    cout << st[0] << st[0] << "\n";
-    return;
-  }
+    vector<pair<int, int>> arr(n);
 
-  string out = "";
-  out += st[0];
-
-  ll i = 1;
-  while (i < n)
-  {
-    if (st[i] > st[i - 1])
+    for (auto &i : arr)
     {
-      break;
+        cin >> i.first;
+        cin >> i.second;
     }
-    out += st[i];
-    i++;
-  }
 
-  string rev = out;
-  reverse(all(rev));
-  out.append(rev);
+    ll time = 60 * h + m;
+    ll ans = 24 * 60;
 
-  cout << out << "\n";
+    for (auto &p : arr)
+    {
+        ll t = (60 * p.first + p.second) - time;
+        if (t < 0)
+            t += (24 * 60);
+        ans = min(ans, t);
+    }
+
+    cout << (ans / 60) << " " << (ans % 60) << "\n";
 }
 
 int main()
 {
-  ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-  srand(chrono::high_resolution_clock::now().time_since_epoch().count());
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    srand(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-  int t = 1;
-  cin >> t;
-  while (t--)
-  {
-    solve();
-  }
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
 
-  return 0;
+    return 0;
 }
