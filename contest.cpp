@@ -120,38 +120,55 @@ void _print(map<T, V> v)
 const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
 //=======================
+vl sqs;
 
 void solve()
 {
-    int n, h, m;
-    cin >> n >> h >> m;
+    string s;
+    cin >> s;
+    int k;
+    cin >> k;
 
-    vector<pair<int, int>> arr(n);
+    map<int, int> ways;
 
-    for (auto &i : arr)
+    vi zeros;
+    fo(i, s.length())
     {
-        cin >> i.first;
-        cin >> i.second;
+        if (s[i] == '0')
+            zeros.push_back(i);
+    }
+    debug(zeros);
+    k--;
+
+    fo(i, zeros.size())
+    {
+        if (i + k >= zeros.size())
+            break;
+
+        int len = zeros[i + k] - zeros[i] + 1;
+        int prev = (i - 1 >= 0 ? (zeros[i] - zeros[i - 1] - 1) : zeros[i]);
+        int next = ((i + k + 1 < zeros.size() ? (zeros[i + k + 1] - zeros[i + k] - 1) : (s.length() - 1 - zeros[i + k])));
+        debug(len);
+        debug(prev);
+        debug(next);
+        ways[prev + len + next]++;
     }
 
-    ll time = 60 * h + m;
-    ll ans = 24 * 60;
-
-    for (auto &p : arr)
-    {
-        ll t = (60 * p.first + p.second) - time;
-        if (t < 0)
-            t += (24 * 60);
-        ans = min(ans, t);
-    }
-
-    cout << (ans / 60) << " " << (ans % 60) << "\n";
+    auto end = ways.end();
+    --end;
+    debug(end->first);
+    cout << end->second << "\n";
 }
 
 int main()
 {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
+
+    for (int i = 0; i * i <= 1e5; i++)
+    {
+        sqs.push_back(i * i);
+    }
 
     int t = 1;
     cin >> t;
