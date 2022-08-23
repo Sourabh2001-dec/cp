@@ -120,34 +120,13 @@ void _print(map<T, V> v)
 const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
 //=======================
+vl arr(20001);
 
 void solve()
 {
-    int n, q;
-    cin >> n >> q;
-    vi arr(n);
-    for (auto &i : arr)
-        cin >> i;
-
-    string s(n, '0');
-    int q1 = 0;
-
-    Fo(i, n - 1, -1)
-    {
-        if (arr[i] <= q1)
-        {
-            s[i] = '1';
-        }
-        else
-        {
-            if (q1 < q)
-                q1++, s[i] = '1';
-            else
-                s[i] = '0';
-        }
-    }
-
-    cout << s << "\n";
+    ll n;
+    cin >> n;
+    cout << arr[n - 1] << "\n";
 }
 
 int main()
@@ -157,6 +136,30 @@ int main()
 
     int t = 1;
     cin >> t;
+    arr[0] = 1;
+    for (int i = 2; i <= 9; i++)
+        arr[i - 1] = arr[i - 2] + 1;
+    arr[9] = arr[8];
+
+    ll next = 11;
+    ll dig = 2;
+    for (ll i = 11; i <= (ll)2000; i++)
+    {
+        if (i % next)
+            arr[i - 1] = arr[i - 2] + 1;
+        else
+            arr[i - 1] = arr[i - 2];
+
+        if (i == next * 9)
+        {
+            ll next = 10;
+            fo(j, dig + 2) next *= 10;
+            next += 1;
+            dig++;
+        }
+
+        debug(next);
+    }
     while (t--)
     {
         solve();
