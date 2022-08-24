@@ -10,6 +10,9 @@ using namespace std;
 // we push the start node as zero in the queue
 // we discover the adjacent nodes and push them in queue if the cost is decreased
 
+//!⌚  O(V^2)
+// All graphs must!! be connected
+
 int main()
 {
   int N, m;

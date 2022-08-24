@@ -1,3 +1,5 @@
+// O(V + VlogE)
+
 #include <bits/stdc++.h>
 using namespace std;
 int main()
@@ -28,7 +30,6 @@ int main()
     int dis = elem.first;
     int node = elem.second;
     pq.pop();
-
 
     // if we have inserted the node with updated distance lesser then current element which may be already processed we can ignore current
     if (dist[node] >= dis)

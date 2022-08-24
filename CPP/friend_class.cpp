@@ -7,7 +7,6 @@ using namespace std;
  *                                                                                      */
 //========================================================================================
 
-
 //========================================================================================
 /*                                                                                      *
  *                      Class member functions as friend functions                      *
@@ -20,6 +19,7 @@ class A
 {
 public:
     int Func1(B &b);
+    static void statFunc(B &b);
 
 private:
     int pvtA = 6;
@@ -35,11 +35,18 @@ public:
     // 1️⃣ Only Method as friend
     // A::Func1 is a friend function to class B
     // so A::Func1 has access to all members of B
-    //    friend int A::Func1( B& );
+    friend int A::Func1(B &);
 
     // 2️⃣ All methods as friend
-    friend class A;
+    // friend class A;
+
+    friend void A::statFunc(B &b);
 };
+
+void A::statFunc(B &b)
+{
+    cout << b._b;
+}
 
 int A::Func1(B &b)
 {
@@ -58,6 +65,8 @@ int main(int argc, char const *argv[])
     // the class of which it is friend
     // b.Func1(b); ❌
 
-    cout << a.Func1(b);
+    cout << a.Func1(b) << "\n";
+    cout << "static as friend ";
+    A::statFunc(b);
     return 0;
 }
